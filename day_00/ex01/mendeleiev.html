@@ -1,0 +1,776 @@
+<html>
+	<head>
+		<title>The Periodic Table</title>
+		<style>
+			table {
+				
+			}
+			
+			td {
+				border-radius: 2px;
+				box-shadow: 0.5px 0.5px #000000;
+			}
+			
+			td.hidden {
+				visibility: hidden;
+			}
+			td.nonmetal {
+				background-color: greenyellow
+			}
+			td.alkaline {
+				background-color: red;
+			}
+			td.alkalineearth {
+				background-color: orange;
+			}
+			td.halogen {
+				background-color: deepskyblue;
+			}
+			td.rareGas {
+				background-color: cadetblue
+			}
+			td.semimetal {
+				background-color: yellow;
+			}
+			td.metal {
+				background-color: dodgerblue;
+			}
+			td.transitivemetal {
+				background-color: darkorange;
+			}
+			td.lanthanide {
+				background-color: orangered;
+			}
+			td.actinide {
+				background-color: deeppink;
+			}
+			td.hidden {
+				height: 10px;
+			}
+			
+			.element {
+				color: white;
+				text-align: center;
+				font-size: 150%;
+				font-weight: bold;
+				text-shadow: 2px 2px #000000;
+			}
+			
+			.atomicNumber {
+				text-align: right;
+				color: white;
+				text-shadow: 1px 1px #000000;
+			}
+			
+			.atomicWeight {
+				text-align: right;
+				color: white;
+				text-shadow: 1px 1px #000000;
+			}
+			
+			#star {
+				text-align: center;
+				color: white;
+			}
+			
+			#starstar {
+				text-align: center;
+				color: white;
+			}
+			
+		</style>
+	</head>
+	<body bgcolor="lightgreen">
+		
+		<table align="center">
+			<tr>
+				<td class="nonmetal">
+					<div class="atomicNumber">1</div>
+					<div class="element">H</div>
+					<div class="atomicWeight">1.008</div>
+				</td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="rareGas">
+					<div class="atomicNumber">2</div>
+					<div class="element">He</div>
+					<div class="atomicWeight">4.003</div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td class="alkaline">
+					<div class="atomicNumber">3</div>
+					<div class="element">Li</div>
+					<div class="atomicWeight">6.941</div>
+				</td>
+				<td class="alkalineEarth">
+					<div class="atomicNumber">4</div>
+					<div class="element">Be</div>
+					<div class="atomicWeight">6.941</div>
+				</td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="semimetal">
+					<div class="atomicNumber">7</div>
+					<div class="element">B</div>
+					<div class="atomicWeight">10.811</div>
+				</td>
+				<td class="nonmetal">
+					<div class="atomicNumber">6</div>
+					<div class="element">C</div>
+					<div class="atomicWeight">12.011</div>
+				</td>
+				<td class="nonmetal">
+					<div class="atomicNumber">7</div>
+					<div class="element">N</div>
+					<div class="atomicWeight">14.007</div>
+				</td>
+				<td class="nonmetal">
+					<div class="atomicNumber">8</div>
+					<div class="element">O</div>
+					<div class="atomicWeight">15.999</div>
+				</td>
+				<td class="halogen">
+					<div class="atomicNumber">9</div>
+					<div class="element">F</div>
+					<div class="atomicWeight">18.998</div>
+				</td>
+				<td class="rareGas">
+					<div class="atomicNumber">10</div>
+					<div class="element">Ne</div>
+					<div class="atomicWeight">20.180</div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td class="alkaline">
+					<div class="atomicNumber">11</div>
+					<div class="element">Na</div>
+					<div class="atomicWeight">27.990</div>
+				</td>
+				<td class="alkalineEarth">
+					<div class="atomicNumber">12</div>
+					<div class="element">Mg</div>
+					<div class="atomicWeight">24.305</div>
+				</td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="metal">
+					<div class="atomicNumber">13</div>
+					<div class="element">Al</div>
+					<div class="atomicWeight">26.982</div>
+				</td>
+				<td class="semimetal">
+					<div class="atomicNumber">14</div>
+					<div class="element">Si</div>
+					<div class="atomicWeight">28.086</div>
+				</td>
+				<td class="nonmetal">
+					<div class="atomicNumber">15</div>
+					<div class="element">P</div>
+					<div class="atomicWeight">30.974</div>
+				</td>
+				<td class="nonmetal">
+					<div class="atomicNumber">16</div>
+					<div class="element">S</div>
+					<div class="atomicWeight">32.066</div>
+				</td>
+				<td class="halogen">
+					<div class="atomicNumber">17</div>
+					<div class="element">Cl</div>
+					<div class="atomicWeight">32.453</div>
+				</td>
+				<td class="rareGas">
+					<div class="atomicNumber">18</div>
+					<div class="element">Ar</div>
+					<div class="atomicWeight">39.948</div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td class="alkaline">
+					<div class="atomicNumber">19</div>
+					<div class="element">K</div>
+					<div class="atomicWeight">39.098</div>
+				</td>
+				<td class="alkalineEarth">
+					<div class="atomicNumber">20</div>
+					<div class="element">Ca</div>
+					<div class="atomicWeight">40.478</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">21</div>
+					<div class="element">Sc</div>
+					<div class="atomicWeight">44.956</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">22</div>
+					<div class="element">Ti</div>
+					<div class="atomicWeight">47.880</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">23</div>
+					<div class="element">V</div>
+					<div class="atomicWeight">50.942</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">24</div>
+					<div class="element">Cr</div>
+					<div class="atomicWeight">51.996</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">25</div>
+					<div class="element">Mn</div>
+					<div class="atomicWeight">54.938</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">26</div>
+					<div class="element">Fe</div>
+					<div class="atomicWeight">55.933</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">27</div>
+					<div class="element">Co</div>
+					<div class="atomicWeight">58.933</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">28</div>
+					<div class="element">Ni</div>
+					<div class="atomicWeight">58.693</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">29</div>
+					<div class="element">Cu</div>
+					<div class="atomicWeight">63.546</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">30</div>
+					<div class="element">Zn</div>
+					<div class="atomicWeight">63.390</div>
+				</td>
+				<td class="metal">
+					<div class="atomicNumber">31</div>
+					<div class="element">Ga</div>
+					<div class="atomicWeight">69.732</div>
+				</td>
+				<td class="semimetal">
+					<div class="atomicNumber">32</div>
+					<div class="element">Ge</div>
+					<div class="atomicWeight">72.610</div>
+				</td>
+				<td class="semimetal">
+					<div class="atomicNumber">33</div>
+					<div class="element">As</div>
+					<div class="atomicWeight">74.922</div>
+				</td>
+				<td class="nonmetal">
+					<div class="atomicNumber">34</div>
+					<div class="element">Se</div>
+					<div class="atomicWeight">72.090</div>
+				</td>
+				<td class="halogen">
+					<div class="atomicNumber">35</div>
+					<div class="element">Br</div>
+					<div class="atomicWeight">79.904</div>
+				</td>
+				<td class="rareGas">
+					<div class="atomicNumber">36</div>
+					<div class="element">Kr</div>
+					<div class="atomicWeight">81.800</div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td class="alkaline">
+					<div class="atomicNumber">37</div>
+					<div class="element">Rb</div>
+					<div class="atomicWeight">84.468</div>
+				</td>
+				<td class="alkalineEarth">
+					<div class="atomicNumber">38</div>
+					<div class="element">Sr</div>
+					<div class="atomicWeight">87.630</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">39</div>
+					<div class="element">Y</div>
+					<div class="atomicWeight">88.906</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">40</div>
+					<div class="element">Zr</div>
+					<div class="atomicWeight">91.224</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">41</div>
+					<div class="element">Nb</div>
+					<div class="atomicWeight">92.906</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">42</div>
+					<div class="element">Mo</div>
+					<div class="atomicWeight">95.94</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">43</div>
+					<div class="element">Te</div>
+					<div class="atomicWeight">98.807</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">44</div>
+					<div class="element">Ru</div>
+					<div class="atomicWeight">101.070</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">45</div>
+					<div class="element">Rh</div>
+					<div class="atomicWeight">102.906</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">46</div>
+					<div class="element">Pd</div>
+					<div class="atomicWeight">106.42</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">47</div>
+					<div class="element">Ag</div>
+					<div class="atomicWeight">107.968</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">48</div>
+					<div class="element">Cd</div>
+					<div class="atomicWeight">112.411</div>
+				</td>
+				<td class="metal">
+					<div class="atomicNumber">49</div>
+					<div class="element">In</div>
+					<div class="atomicWeight">114.816</div>
+				</td>
+				<td class="metal">
+					<div class="atomicNumber">50</div>
+					<div class="element">Sn</div>
+					<div class="atomicWeight">118.170</div>
+				</td>
+				<td class="semimetal">
+					<div class="atomicNumber">51</div>
+					<div class="element">Sb</div>
+					<div class="atomicWeight">121.760</div>
+				</td>
+				<td class="semimetal">
+					<div class="atomicNumber">52</div>
+					<div class="element">Te</div>
+					<div class="atomicWeight">127.600</div>
+				</td>
+				<td class="halogen">
+					<div class="atomicNumber">53</div>
+					<div class="element">I</div>
+					<div class="atomicWeight">125.904</div>
+				</td>
+				<td class="rareGas">
+					<div class="atomicNumber">54</div>
+					<div class="element">Xe</div>
+					<div class="atomicWeight">131.290</div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td class="alkaline">
+					<div class="atomicNumber">55</div>
+					<div class="element">Cs</div>
+					<div class="atomicWeight">132.905</div>
+				</td>
+				<td class="alkalineEarth">
+					<div class="atomicNumber">56</div>
+					<div class="element">Ba</div>
+					<div class="atomicWeight">137.327</div>
+				</td>
+				<td class="lanthanide" id="star">
+					*
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">72</div>
+					<div class="element">Hf</div>
+					<div class="atomicWeight">178.49</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">73</div>
+					<div class="element">Ta</div>
+					<div class="atomicWeight">180.948</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">74</div>
+					<div class="element">W</div>
+					<div class="atomicWeight">153.850</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">75</div>
+					<div class="element">Re</div>
+					<div class="atomicWeight">168.207</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">76</div>
+					<div class="element">Cs</div>
+					<div class="atomicWeight">190.23</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">77</div>
+					<div class="element">Ir</div>
+					<div class="atomicWeight">192.220</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">78</div>
+					<div class="element">Pt</div>
+					<div class="atomicWeight">195.080</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">79</div>
+					<div class="element">Au</div>
+					<div class="atomicWeight">196.967</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">80</div>
+					<div class="element">Hg</div>
+					<div class="atomicWeight">200.590</div>
+				</td>
+				<td class="metal">
+					<div class="atomicNumber">81</div>
+					<div class="element">Tl</div>
+					<div class="atomicWeight">204.383</div>
+				</td>
+				<td class="metal">
+					<div class="atomicNumber">82</div>
+					<div class="element">Pb</div>
+					<div class="atomicWeight">207.200</div>
+				</td>
+				<td class="metal">
+					<div class="atomicNumber">83</div>
+					<div class="element">Bl</div>
+					<div class="atomicWeight">209.980</div>
+				</td>
+				<td class="semimetal">
+					<div class="atomicNumber">84</div>
+					<div class="element">Po</div>
+					<div class="atomicWeight">208.982</div>
+				</td>
+				<td class="halogen">
+					<div class="atomicNumber">85</div>
+					<div class="element">At</div>
+					<div class="atomicWeight">209.987</div>
+				</td>
+				<td class="rareGas">
+					<div class="atomicNumber">86</div>
+					<div class="element">Rn</div>
+					<div class="atomicWeight">222.018</div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td class="alkaline">
+					<div class="atomicNumber">87</div>
+					<div class="element">Fr</div>
+					<div class="atomicWeight">222.020</div>
+				</td>
+				<td class="alkalineEarth">
+					<div class="atomicNumber">88</div>
+					<div class="element">Ra</div>
+					<div class="atomicWeight">226.025</div>
+				</td>
+				<td class="actinide" id="starstar">
+					**
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">104</div>
+					<div class="element">Rf</div>
+					<div class="atomicWeight">281</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">105</div>
+					<div class="element">Db</div>
+					<div class="atomicWeight">262</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">106</div>
+					<div class="element">Sg</div>
+					<div class="atomicWeight">266</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">107</div>
+					<div class="element">Bh</div>
+					<div class="atomicWeight">264</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">108</div>
+					<div class="element">Hs</div>
+					<div class="atomicWeight">269</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">109</div>
+					<div class="element">Mt</div>
+					<div class="atomicWeight">268</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">110</div>
+					<div class="element">Ds</div>
+					<div class="atomicWeight">269</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">111</div>
+					<div class="element">Rg</div>
+					<div class="atomicWeight">272</div>
+				</td>
+				<td class="transitiveMetal">
+					<div class="atomicNumber">112</div>
+					<div class="element">Cn</div>
+					<div class="atomicWeight">277</div>
+				</td>
+				<td class="metal">
+					<div class="atomicNumber">113</div>
+					<div class="element">Nh</div>
+					<div class="atomicWeight">286</div>
+				</td>
+				<td class="metal">
+					<div class="atomicNumber">114</div>
+					<div class="element">Fl</div>
+					<div class="atomicWeight">289</div>
+				</td>
+				<td class="metal">
+					<div class="atomicNumber">115</div>
+					<div class="element">Mc</div>
+					<div class="atomicWeight">289</div>
+				</td>
+				<td class="metal">
+					<div class="atomicNumber">116</div>
+					<div class="element">Lv</div>
+					<div class="atomicWeight">293</div>
+				</td>
+				<td class="halogen">
+					<div class="atomicNumber">117</div>
+					<div class="element">Ts</div>
+					<div class="atomicWeight">294</div>
+				</td>
+				<td class="rareGas">
+					<div class="atomicNumber">118</div>
+					<div class="element">Og</div>
+					<div class="atomicWeight">294</div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+			</tr>
+			
+			<tr>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="lanthanide">
+					<div class="atomicNumber">57</div>
+					<div class="element">La</div>
+					<div class="atomicWeight">138.906</div>
+				</td>
+				<td class="lanthanide">
+					<div class="atomicNumber">58</div>
+					<div class="element">Ce</div>
+					<div class="atomicWeight">146.003</div>
+				</td>
+				<td class="lanthanide">
+					<div class="atomicNumber">59</div>
+					<div class="element">Pr</div>
+					<div class="atomicWeight">149.908</div>
+				</td>
+				<td class="lanthanide">
+					<div class="atomicNumber">60</div>
+					<div class="element">Nd</div>
+					<div class="atomicWeight">144.240</div>
+				</td>
+				<td class="lanthanide">
+					<div class="atomicNumber">61</div>
+					<div class="element">Pm</div>
+					<div class="atomicWeight">144.900</div>
+				</td>
+				<td class="lanthanide">
+					<div class="atomicNumber">62</div>
+					<div class="element">Sm</div>
+					<div class="atomicWeight">150.360</div>
+				</td>
+				<td class="lanthanide">
+					<div class="atomicNumber">63</div>
+					<div class="element">Eu</div>
+					<div class="atomicWeight">151.89</div>
+				</td>
+				<td class="lanthanide">
+					<div class="atomicNumber">64</div>
+					<div class="element">Gd</div>
+					<div class="atomicWeight">157.25</div>
+				</td>
+				<td class="lanthanide">
+					<div class="atomicNumber">65</div>
+					<div class="element">Tb</div>
+					<div class="atomicWeight">158.925</div>
+				</td>
+				<td class="lanthanide">
+					<div class="atomicNumber">66</div>
+					<div class="element">Dy</div>
+					<div class="atomicWeight">162.50</div>
+				</td>
+				<td class="lanthanide">
+					<div class="atomicNumber">67</div>
+					<div class="element">Ho</div>
+					<div class="atomicWeight">164.939</div>
+				</td>
+				<td class="lanthanide">
+					<div class="atomicNumber">68</div>
+					<div class="element">Er</div>
+					<div class="atomicWeight">167.28</div>
+				</td>
+				<td class="lanthanide">
+					<div class="atomicNumber">69</div>
+					<div class="element">Tm</div>
+					<div class="atomicWeight">168.934</div>
+				</td>
+				<td class="lanthanide">
+					<div class="atomicNumber">70</div>
+					<div class="element">Yb</div>
+					<div class="atomicWeight">173.04</div>
+				</td>
+				<td class="lanthanide">
+					<div class="atomicNumber">71</div>
+					<div class="element">Lu</div>
+					<div class="atomicWeight">174.987</div>
+				</td>
+			</tr>
+			
+			<tr>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="hidden"></td>
+				<td class="actinide">
+					<div class="atomicNumber">89</div>
+					<div class="element">Ac</div>
+					<div class="atomicWeight">227.026</div>
+				</td>
+				<td class="actinide">
+					<div class="atomicNumber">90</div>
+					<div class="element">Th</div>
+					<div class="atomicWeight">232.038</div>
+				</td>
+				<td class="actinide">
+					<div class="atomicNumber">91</div>
+					<div class="element">Pa</div>
+					<div class="atomicWeight">237.636</div>
+				</td>
+				<td class="actinide">
+					<div class="atomicNumber">92</div>
+					<div class="element">U</div>
+					<div class="atomicWeight">235.029</div>
+				</td>
+				<td class="actinide">
+					<div class="atomicNumber">93</div>
+					<div class="element">Np</div>
+					<div class="atomicWeight">232.043</div>
+				</td>
+				<td class="actinide">
+					<div class="atomicNumber">94</div>
+					<div class="element">Pu</div>
+					<div class="atomicWeight">244.064</div>
+				</td>
+				<td class="actinide">
+					<div class="atomicNumber">95</div>
+					<div class="element">Am</div>
+					<div class="atomicWeight">243.51</div>
+				</td>
+				<td class="actinide">
+					<div class="atomicNumber">96</div>
+					<div class="element">Cm</div>
+					<div class="atomicWeight">247.070</div>
+				</td>
+				<td class="actinide">
+					<div class="atomicNumber">97</div>
+					<div class="element">Bk</div>
+					<div class="atomicWeight">247.070</div>
+				</td>
+				<td class="actinide">
+					<div class="atomicNumber">98</div>
+					<div class="element">Cf</div>
+					<div class="atomicWeight">241.085</div>
+				</td>
+				<td class="actinide">
+					<div class="atomicNumber">99</div>
+					<div class="element">Es</div>
+					<div class="atomicWeight">256</div>
+				</td>
+				<td class="actinide">
+					<div class="atomicNumber">100</div>
+					<div class="element">Fm</div>
+					<div class="atomicWeight">257.09</div>
+				</td>
+				<td class="actinide">
+					<div class="atomicNumber">101</div>
+					<div class="element">Md</div>
+					<div class="atomicWeight">258.1</div>
+				</td>
+				<td class="actinide">
+					<div class="atomicNumber">102</div>
+					<div class="element">No</div>
+					<div class="atomicWeight">259.01</div>
+				</td>
+				<td class="actinide">
+					<div class="atomicNumber">103</div>
+					<div class="element">Lr</div>
+					<div class="atomicWeight">262</div>
+				</td>
+			</tr>
+		</table>
+		
+		<p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/DIMendeleevCab.jpg" height="200px"></p>
+		
+	</body>
+</html>
