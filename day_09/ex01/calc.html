@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calc.html</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <script>
+            window.setInterval(function() {
+                display("Please, use me...");
+            }, 30000);
+            
+            function display(x) {
+                console.log(x);
+                alert(x);
+            }
+            
+            function submitOnClickEvent(x) {
+                var x = parseInt(document.getElementById("leftOperand").value);
+                var y = parseInt(document.getElementById("rightOperand").value);
+                var opSelect = document.getElementById("operator");
+                var op = opSelect.options[opSelect.selectedIndex].text;
+                
+                if (isNaN(x) || isNaN(y) || x < 0 || y < 0) {
+                    alert("Error :(");
+                } else if ((op == '/' || op == '%') && y === 0) {
+                    display("It's over 9000!");
+                } else {
+                    var r = 0;
+                    
+                    switch (op) {
+                        case '+':
+                            r = x + y;
+                            break;
+                        case '-':
+                            r = x - y;
+                            break;
+                        case '*':
+                            r = x * y;
+                            break;
+                        case '/':
+                            r = x / y;
+                            break;
+                        case '%':
+                            r = x % y;
+                            break;
+                        default:
+                            break;
+                    }
+                    
+                    display(r);
+                }
+            }
+        </script>
+        
+        <form id="calc">
+            <input id="leftOperand" type="text" name="leftOperand" />
+            <select id="operator" name="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <input id="rightOperand" type="text" name="rightOperand" />
+            <input id="submit" type="submit" name="submit" value="Try me!" onclick="submitOnClickEvent();"/>
+        </form>
+    </body>
+</html>

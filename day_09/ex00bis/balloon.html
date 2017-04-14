@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <style>
+            #balloon {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                border-radius: 100%;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                var color = "red";
+
+                $("#balloon").click(function(e) {
+                    // color
+                    if (color == "red") {
+                        e.target.style.backgroundColor = "green";
+                        color = "green";
+                    } else if (color == "green") {
+                        e.target.style.backgroundColor = "blue";
+                        color = "blue";
+                    } else if (color == "blue") {
+                        e.target.style.backgroundColor = "red";
+                        color = "red";
+                    }
+
+                    // dimension
+                    var w = parseInt(e.target.offsetWidth);
+                    var h = parseInt(e.target.offsetWidth);
+
+                    w = w + 10;
+                    h = h + 10;
+
+                    if (w <= 420 || h <= 420) {
+                        e.target.style.width = w + "px";
+                        e.target.style.height = h + "px";
+                    } else {
+                        e.target.style.width = "200px";
+                        e.target.style.height = "200px";
+                    }
+                });
+
+                $("#balloon").mouseout(function(e) {
+                    // color
+                    if (color == "blue") {
+                        e.target.style.backgroundColor = "green";
+                        color = "green";
+                    } else if (color == "green") {
+                        e.target.style.backgroundColor = "red";
+                        color = "red";
+                    } else if (color == "red") {
+                        e.target.style.backgroundColor = "blue";
+                        color = "blue";
+                    }
+
+                    // dimension
+                    var w = parseInt(e.target.offsetWidth);
+                    var h = parseInt(e.target.offsetWidth);
+
+                    w = w - 10;
+                    h = h - 10;
+
+                    if (w >= 200 && h >= 200) {
+                        e.target.style.width = w + "px";
+                        e.target.style.height = h + "px";
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="balloon"></div>
+    </body>
+</html>

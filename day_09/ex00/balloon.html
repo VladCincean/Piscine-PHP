@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+        <style>
+            #balloon {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                border-radius: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var color = "red";
+                        
+            function changeColor() {
+                if (color == "red") {
+                    document.getElementById('balloon').style.backgroundColor = "green";
+                    color = "green";
+                } else if (color == "green") {
+                    document.getElementById('balloon').style.backgroundColor = "blue";
+                    color = "blue";
+                } else if (color == "blue") {
+                    document.getElementById('balloon').style.backgroundColor = "red";
+                    color = "red";
+                }
+            }
+            
+            function changeDimension() {
+                var w = parseInt(document.getElementById('balloon').offsetWidth);
+                var h = parseInt(document.getElementById('balloon').offsetWidth);
+                
+                w = w + 10;
+                h = h + 10;
+                
+                if (w <= 420 || h <= 420) {
+                    document.getElementById('balloon').style.width = w + "px";
+                    document.getElementById('balloon').style.height = h + "px";
+                } else {
+                    document.getElementById('balloon').style.width = "200px";
+                    document.getElementById('balloon').style.height = "200px";
+                }
+            }
+            
+            function balloonClickEvent() {
+                changeDimension();
+                changeColor();
+            }
+            
+            function balloonMouseOutEvent() {
+                if (color == "blue") {
+                    document.getElementById('balloon').style.backgroundColor = "green";
+                    color = "green";
+                } else if (color == "green") {
+                    document.getElementById('balloon').style.backgroundColor = "red";
+                    color = "red";
+                } else if (color == "red") {
+                    document.getElementById('balloon').style.backgroundColor = "blue";
+                    color = "blue";
+                }
+                
+                var w = parseInt(document.getElementById('balloon').offsetWidth);
+                var h = parseInt(document.getElementById('balloon').offsetWidth);
+                
+                w = w - 10;
+                h = h - 10;
+                
+                if (w >= 200 && h >= 200) {
+                    document.getElementById('balloon').style.width = w + "px";
+                    document.getElementById('balloon').style.height = h + "px";
+                }
+            }
+        </script>
+
+        <div id="balloon" onclick="balloonClickEvent();" onmouseout="balloonMouseOutEvent();"></div>
+    </body>
+</html>
