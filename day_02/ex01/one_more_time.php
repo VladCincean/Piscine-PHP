@@ -1,5 +1,7 @@
 #!/usr/bin/php
 <?php
+date_default_timezone_set('Europe/Paris');
+
 function ft_is_valid($a) {
 	return preg_match(
 		"/^(([L|l]undi)|([M|m]ardi)|([M|m]ercredi)|([J|j]eudi)"
