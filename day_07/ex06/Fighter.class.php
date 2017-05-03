@@ -10,10 +10,6 @@ abstract class Fighter {
 		return ($this->type);
 	}
 
-	public function __clone() {
-		//...
-	}
-
 	public abstract function fight($with);
 }
 ?>
