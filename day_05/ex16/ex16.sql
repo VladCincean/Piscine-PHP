@@ -1,4 +1,4 @@
-SELECT COUNT(id_film)
+SELECT COUNT(id_film) AS 'films'
 FROM historique_membre
 WHERE (CAST(date as DATE) BETWEEN '2006-10-30' AND '2007-07-27')
 OR (EXTRACT(MONTH FROM date) = 12 AND EXTRACT(DAY FROM date) = 24);

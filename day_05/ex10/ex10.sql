@@ -1,7 +1,6 @@
-SELECT titre AS 'Titre', resum as 'Resume', annee_prod
-FROM film
-WHERE id_genre = (
-	SELECT id_genre
-	FROM genre
-	WHERE nom = 'erotic'
-);
+SELECT f.titre AS 'Titre', f.resum AS 'Resume', f.annee_prod
+FROM film f
+INNER JOIN genre g
+ON f.id_genre = g.id_genre
+WHERE g.nom = 'erotic'
+ORDER BY f.annee_prod DESC;
